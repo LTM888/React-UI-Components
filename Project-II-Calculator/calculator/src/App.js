@@ -100,16 +100,22 @@ class App extends Component {
             <Input>{this.state.input}</Input>
           </div>
           <div className="row">
+            <ClearButton handleClear={this.clearInput}>Clear</ClearButton>
+            <Button handleClick={this.divide}>/</Button>
+          </div>
+          <div className="row">
             <Button handleClick={this.addToInput}>7</Button>
             <Button handleClick={this.addToInput}>8</Button>
             <Button handleClick={this.addToInput}>9</Button>
-            <Button handleClick={this.divide}>/</Button>
+            <Button handleClick={this.multiply}>*</Button>
+            
           </div>
           <div className="row">
             <Button handleClick={this.addToInput}>4</Button>
             <Button handleClick={this.addToInput}>5</Button>
             <Button handleClick={this.addToInput}>6</Button>
-            <Button handleClick={this.multiply}>*</Button>
+            <Button handleClick={this.subtract}>-</Button>
+            
           </div>
           <div className="row">
             <Button handleClick={this.addToInput}>1</Button>
@@ -121,11 +127,9 @@ class App extends Component {
             <Button handleClick={this.addDecimal}>.</Button>
             <Button handleClick={this.addZeroToInput}>0</Button>
             <Button handleClick={this.evaluate}>=</Button>
-            <Button handleClick={this.subtract}>-</Button>
+            
           </div>
-          <div className="row">
-            <ClearButton handleClear={this.clearInput}>Clear</ClearButton>
-          </div>
+          
         </div>
       </div>
     );
